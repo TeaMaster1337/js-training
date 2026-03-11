@@ -1,0 +1,13 @@
+const departments = {
+  qa: ["Anna", "Bob"],
+  dev: ["John", "Kate", "Igor"],
+  hr: ["Liza"],
+};
+function getAllEmployees(departments) {
+  let employees = [];
+  for (const key in departments) {
+    employees = employees.concat(departments[key]);
+  }
+  return employees;
+}
+console.log(getAllEmployees(departments));

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тетовый полигон</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      debugger;
+    </script>
+    <script>
+      const moonnoxConfigWidget = {
+        initialMessage: {
+          text: "Hello!",
+          suggestions: ["Take bath", "Make dishes"],
+          received: true,
+        },
+        formid: "677f2320-1cbd-4f09-84f3-49e176b141df",
+        darkmode: true,
+        logoTitle: "Instant Tailored Recommendations",
+        logo: "https://jexfqdwfuurykddhaenm.supabase.co/storage/v1/object/public/logos/logo.png",
+        moonnoxUrl: "wss://0k2xpejtu5.execute-api.us-east-1.amazonaws.com/dev",
+        widget_style: "circle",
+        tooltipText: "Recommendations",
+        recommendationLinkText: "Go to Link",
+        widget_orientation: "right",
+        baseUrl:
+          "https://jexfqdwfuurykddhaenm.supabase.co/storage/v1/object/public/widget",
+        widgetUIUrl: "https://widget-dev.s3.amazonaws.com/widget.html",
+      };
+    </script>
+    <link
+      href="https://widget-dev.s3.amazonaws.com/widget-script/styles.css"
+      rel="stylesheet"
+    />
+    <script src="https://widget-dev.s3.amazonaws.com/widget-script/app.js"></script>
+
+    <div class="container">
+      <h1 id="greeting"></h1>
+      <div id="story-text" class="story-box"></div>
+
+      <div id="choice-buttons" class="button-container"></div>
+
+      <div id="error-message" class="hidden error-box"></div>
+    </div>
+
+    <script src="test_4.js"></script>
+  </body>
+</html>
