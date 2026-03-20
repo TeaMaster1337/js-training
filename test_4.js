@@ -11,3 +11,17 @@ function getAllEmployees(departments) {
   return employees;
 }
 console.log(getAllEmployees(departments));
+
+const departments = {
+  qa: ["Anna", "Bob"],
+  dev: ["John", "Kate", "Igor"],
+  hr: ["Liza"],
+};
+function getAllEmployees(departments) {
+  let employees[];
+  departments.forEach(department => {
+    employees = department;
+    return employees;
+  });
+}
+console.log(getAllEmployees());

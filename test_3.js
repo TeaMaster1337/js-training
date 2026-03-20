@@ -6,21 +6,18 @@ const orders = [
 ];
 
 function getPaidOrdersAmounts(orders) {
-  let total = 0;
-  const amounts = [];
+  let amounts = [];
 
-  for (let i = 0; i < orders.length; i++) {
-    let currentOrder = orders[i];
-
-    if (currentOrder.status === "paid") {
-      total = total + currentOrder.amount;
-      amounts.push(currentOrder.amount);
+  orders.forEach((order) => {
+    if (order.status === "paid") {
+      amounts.push(order.amount);
     }
-  }
+  });
 
-  console.log(amounts);
-  console.log(total);
-  return total;
+  let total = 0;
+  amounts.forEach((amount) => {
+    total = total + amount;
+  });
+
+  return { amounts, total };
 }
-
-getPaidOrdersAmounts(orders);
