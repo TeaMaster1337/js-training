@@ -1,13 +1,13 @@
 const rawUser = {
   name: "  John  ",
   age: "25",
-  isActive: "true",
+  isActive: "false",
 };
 
 function normalizeUser(user) {
   user.name = user.name.trim();
   user.age = Number(user.age);
-  user.isActive = user.isActive === "true";
+  user.isActive = Boolean(user.isActive);
   return user;
 }
 
