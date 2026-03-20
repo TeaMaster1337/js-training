@@ -7,3 +7,5 @@ function getAllEmployees(departments) {
   return Object.values(departments).flat(Infinity);
 }
 console.log(getAllEmployees(departments));
+
+// Test2
