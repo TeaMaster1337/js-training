@@ -26,12 +26,28 @@
 // }
 // console.log(getAllEmployees());
 
+// const departments = {
+//   qa: ["Anna", "Bob"],
+//   dev: ["John", ["Kate"], "Igor"],
+//   hr: ["Liza"],
+// };
+// function getAllEmployees(departments) {
+//   return Object.values(departments).flat(Infinity);
+// }
+// console.log(getAllEmployees(departments));
+
 const departments = {
   qa: ["Anna", "Bob"],
-  dev: ["John", ["Kate"], "Igor"],
+  dev: ["John", "Kate", "Igor"],
   hr: ["Liza"],
 };
 function getAllEmployees(departments) {
-  return Object.values(departments).flat(Infinity);
+  const employees = [];
+  for (const key in departments) {
+    if (departments.hasOwnProperty(key)) {
+      employees.push(...departments[key].flat(Infinity));
+    }
+  }
+  return employees;
 }
 console.log(getAllEmployees(departments));
